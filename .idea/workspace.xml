@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vote.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/polls-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/polls-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Poll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +173,7 @@
       <path value="$PROJECT_DIR$/vendor/pestphp/pest" />
       <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin" />
       <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin-laravel" />
+      <path value="$PROJECT_DIR$/vendor/laravel/slack-notification-channel" />
     </include_path>
   </component>
   <component name="ProjectId" id="2GsQbrE69M1GytQl614cLu8R0dc" />
@@ -219,7 +221,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667174885419</updated>
-      <workItem from="1667174886941" duration="29408000" />
+      <workItem from="1667174886941" duration="32198000" />
     </task>
     <servers />
   </component>
