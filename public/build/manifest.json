@@ -8,20 +8,13 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
   },
   "resources/js/app.js": {
-    "file": "assets/app.bcef5132.js",
+    "file": "assets/app.5bab94a6.js",
     "src": "resources/js/app.js",
-    "isEntry": true,
-    "dynamicImports": [
-      "_alpine.1076567f.js"
-    ]
+    "isEntry": true
   },
-  "_alpine.1076567f.js": {
-    "file": "assets/alpine.1076567f.js",
-    "isDynamicEntry": true
-  },
-  "resources/scss/app.scss": {
-    "file": "assets/app.4160b6f5.css",
-    "src": "resources/scss/app.scss",
+  "resources/css/app.css": {
+    "file": "assets/app.32ecb787.css",
+    "src": "resources/css/app.css",
     "isEntry": true
   }
 }
