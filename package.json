@@ -1,4 +1,5 @@
 {
+    "name": "@beer4peer/voting-frontend",
     "private": true,
     "scripts": {
         "dev": "vite",
