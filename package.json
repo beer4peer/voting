@@ -1,4 +1,6 @@
 {
+    "name": "@beer4peer/voting",
+    "license": "GPL-3.0-only",
     "private": true,
     "scripts": {
         "dev": "vite",

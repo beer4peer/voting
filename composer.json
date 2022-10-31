@@ -1,12 +1,12 @@
 {
-    "name": "laravel/laravel",
+    "name": "beer4peer/voting",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Voting platform for beer4peer",
     "keywords": [
-        "framework",
+        "voting",
         "laravel"
     ],
-    "license": "MIT",
+    "license": "GPL-3.0-only",
     "require": {
         "php": "^8",
         "cviebrock/eloquent-sluggable": "^9.0",
