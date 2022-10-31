@@ -1,0 +1,12 @@
+name: Auto Approve Renovate
+
+on: pull_request_target
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    if: startsWith(github.event.pull_request.head.ref, 'dependabot/') || startsWith(github.event.pull_request.head.ref, 'renovate/')
+    steps:
+      - uses: hmarr/auto-approve-action@v3
