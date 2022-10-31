@@ -55,7 +55,8 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
     public function isAdmin(): bool
     {
         return in_array($this->slack_id, [
-            'U0203LX28H0', // Nick Pratley
+            'U0203LX28H0', // Nick Pratley - Dev
+            'UTLF4FBEG', // Nick Pratley - beer4peer
         ]);
     }
 
