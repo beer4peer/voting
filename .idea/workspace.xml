@@ -2,41 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/PollCommentVote.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/poll-comment-vote.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blade.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blade.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vote.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/COPYING" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/CategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CommentResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CommentResource/Pages/CreateComment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CommentResource/Pages/EditComment.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/CommentResource/Pages/ListComments.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/StatusResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/StatusResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/VoteResource.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/VoteResource/Pages/ListVotes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollsIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollsIndex.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Poll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Poll.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Vote.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Vote.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-comment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-comment-vote.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-comment-vote.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/poll/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/poll/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +193,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.9.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.8",
     "last_opened_file_path": "/Users/nickp/code/vote/app/Http/Livewire",
     "nodejs_package_manager_path": "npm",
     "php.override.implement.member.chooser.php.doc": "NONE",
@@ -242,7 +227,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667174885419</updated>
-      <workItem from="1667174886941" duration="22280000" />
+      <workItem from="1667174886941" duration="25009000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-<div class="poll-and-buttons container">
+<div class="poll-and-buttons">
 
     <div class="poll-container bg-white rounded-xl flex mt-4">
         <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
@@ -23,7 +23,8 @@
                         <div>&bull;</div>
                         <div>{{ $poll->category->name }}</div>
                         <div>&bull;</div>
-                        <div class="text-gray-900">{{ $poll->comments->where('is_voting', false)->count() }}comments
+                        <div class="text-gray-900">
+                            {{ $poll->comments->where('is_voting', false)->count() }} {{ Str::plural('comment', $poll->comments->where('is_voting', false)->count()) }}
                         </div>
                     </div>
                     <div

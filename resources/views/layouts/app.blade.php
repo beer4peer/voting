@@ -8,23 +8,16 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
 
         <title>{{ $title ?? 'B4P - Voting' }}</title>
-
-        <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         <livewire:styles />
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans bg-gray-background text-gray-900 text-sm">
 
-        <header class="max-w-6xl mx-auto px-2 md:px-0 flex flex-row justify-between py-4">
+        <header class="max-w-6xl mx-auto px-2 flex flex-row justify-between py-4">
             <a href="/" class="flex flex-row"><img src="{{ asset('img/logo.jpg') }}" alt="logo" class="h-12"></a>
             <div class="flex items-center mt-2 md:mt-0">
                 @if (Route::has('login'))
@@ -58,7 +51,7 @@
 
         <main class="max-w-6xl mx-auto flex flex-col md:flex-row">
 
-            <div class="w-full px-2 md:px-0 ">
+            <div class="w-full px-2 ">
                 <livewire:status-filters />
 
                 <div class="mt-8">
@@ -83,5 +76,14 @@
         @endif
 
         <livewire:scripts />
+        <footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{ date('Y') }} <a href="https://theitdept.au/" class="hover:underline">The It Dept</a>. All Rights Reserved.
+        </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                <li>
+                    <a href="https://github.com/beer4peer/voting.beer4peer.au" class="hover:underline">This code is open source on <i class="fa-brands fa-github"></i> GitHub</a>
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>

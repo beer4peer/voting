@@ -73,8 +73,8 @@
                     <div>&bull;</div>
                     <div>{{ $poll->category->name }}</div>
                     <div>&bull;</div>
-                    <div wire:ignore class="text-gray-900">{{ $poll->comments->where('is_voting', false)->count() }}
-                        comments
+                    <div wire:ignore class="text-gray-900">
+                        {{ $poll->comments->where('is_voting', false)->count() }} {{ Str::plural('comment', $poll->comments->where('is_voting', false)->count()) }}
                     </div>
                 </div>
                 <div

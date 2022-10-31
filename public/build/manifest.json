@@ -1,0 +1,27 @@
+{
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2": {
+    "file": "assets/fa-brands-400.3fe890d0.woff2",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2"
+  },
+  "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf": {
+    "file": "assets/fa-brands-400.c7ae37d3.ttf",
+    "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.bcef5132.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "_alpine.1076567f.js"
+    ]
+  },
+  "_alpine.1076567f.js": {
+    "file": "assets/alpine.1076567f.js",
+    "isDynamicEntry": true
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app.4160b6f5.css",
+    "src": "resources/scss/app.scss",
+    "isEntry": true
+  }
+}
