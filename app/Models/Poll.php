@@ -23,6 +23,24 @@ class Poll extends Model
         'ends_at' => 'datetime',
     ];
 
+    protected $fillable = [
+        'title',
+        'slug',
+        'description',
+        'category_id',
+        'status_id',
+        'ends_at'
+    ];
+
+    public static function booted()
+    {
+        // Set some sane defaults on create
+        static::creating(function (Poll $poll) {
+            $poll->votes_yes = 0;
+            $poll->votes_no = 0;
+        });
+    }
+
     public function comments()
     {
         return $this->hasMany(Comment::class);

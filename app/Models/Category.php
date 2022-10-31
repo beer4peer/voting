@@ -12,6 +12,10 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+    ];
+
     public function polls()
     {
         return $this->hasMany(Poll::class);

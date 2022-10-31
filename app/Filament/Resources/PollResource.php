@@ -32,8 +32,6 @@ class PollResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
-                    ->maxLength(255),
                 Forms\Components\Textarea::make('description')
                     ->required(),
                 Forms\Components\DateTimePicker::make('ends_at'),

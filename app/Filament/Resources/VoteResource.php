@@ -19,15 +19,9 @@ class VoteResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
-    public static function form(Form $form): Form
+    public static function canCreate(): bool
     {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('poll_id')
-                    ->required(),
-                Forms\Components\TextInput::make('user_id')
-                    ->required(),
-            ]);
+        return false;
     }
 
     public static function table(Table $table): Table
@@ -45,26 +39,22 @@ class VoteResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ListVotes::route('/'),
-            'create' => Pages\CreateVote::route('/create'),
-            'edit' => Pages\EditVote::route('/{record}/edit'),
         ];
-    }    
+    }
 }
