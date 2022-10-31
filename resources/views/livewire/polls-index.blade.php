@@ -12,9 +12,7 @@
             <select wire:model="filter" name="other_filters" id="other_filters" class="w-full rounded-xl border-none px-4 py-2">
                 <option value="No Filter">No Filter</option>
                 <option value="Top Voted">Top Voted</option>
-                <option value="My Polls">My Polls</option>
                 @admin
-                    <option value="Spam Polls">Spam Polls (admin)</option>
                     <option value="Spam Comments">Spam Comments (admin)</option>
                 @endadmin
             </select>
