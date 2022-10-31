@@ -1,4 +1,4 @@
-name: Docker Build voting.beer4peer.au
+name: Docker Build voting
 
 on:
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@57396166ad8aefe6098280995947635806a0e6ea
         with:
-          images: ghcr.io/beer4peer/voting.beer4peer.au
+          images: ghcr.io/beer4peer/voting
 
       - name: Build Documentation
         run: mkdocs build --no-directory-urls
@@ -40,8 +40,8 @@ jobs:
           HEROKU_PHP_PLATFORM_REPOSITORIES: https://heroku-php-extensions.s3.amazonaws.com/dist-heroku-20-stable/packages.json
           APP_ENV: production
         run: |
-          pack build ghcr.io/beer4peer/voting.beer4peer.au \
-          --tag ghcr.io/beer4peer/voting.beer4peer.au:${{ github.ref_name }}-$(git rev-parse --short HEAD)-$(date +%s) \
+          pack build ghcr.io/beer4peer/voting \
+          --tag ghcr.io/beer4peer/voting:${{ github.ref_name }}-$(git rev-parse --short HEAD)-$(date +%s) \
           --tag $(echo "${{ steps.meta.outputs.tags }}" | xargs | sed 's/ / --tag /') \
           --env "HEROKU_PHP_PLATFORM_REPOSITORIES" \
           --env "FONTAWESOME_NPM_AUTH_TOKEN" \
