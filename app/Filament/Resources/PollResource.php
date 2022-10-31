@@ -16,8 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PollResource extends Resource
 {
     protected static ?string $model = Poll::class;
-
     protected static ?string $navigationIcon = 'heroicon-o-collection';
+
 
     public static function form(Form $form): Form
     {
@@ -68,7 +68,8 @@ class PollResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            RelationManagers\CommentsRelationManager::class,
+            RelationManagers\VotesRelationManager::class
         ];
     }
 

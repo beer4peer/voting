@@ -57,6 +57,8 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         return in_array($this->slack_id, [
             'U0203LX28H0', // Nick Pratley - Dev
             'UTLF4FBEG', // Nick Pratley - beer4peer
+            'UET7N6EEL', // Michael Hobl - beer4peer
+            'UEX64AD3M', // Karl Kloppenborg - beer4peer
         ]);
     }
 
