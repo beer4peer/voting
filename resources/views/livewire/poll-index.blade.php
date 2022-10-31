@@ -82,8 +82,8 @@
                     class="flex items-center space-x-2 mt-4 md:mt-0"
                 >
                     <div
-                        class="{{ 'status-'.Str::kebab($poll->status->name) }} @if($poll->ends_at->isPast()) status-closed @endif text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
-                        @if($poll->ends_at->isPast())
+                        class="{{ 'status-'.Str::kebab($poll->status->name) }} @if($poll->ends_at?->isPast()) status-closed @endif text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                        @if($poll->ends_at?->isPast())
                             Closed
                         @else
                             {{ $poll->status->name }}

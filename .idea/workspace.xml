@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="">
+    <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/PollTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/PollTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667174885419</updated>
-      <workItem from="1667174886941" duration="28699000" />
+      <workItem from="1667174886941" duration="29036000" />
     </task>
     <servers />
   </component>
@@ -232,5 +234,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2" />
   </component>
 </project>
