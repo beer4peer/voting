@@ -18,7 +18,7 @@ class CommentPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class CommentPolicy
      */
     public function view(User $user, Comment $comment)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class CommentPolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class CommentPolicy
      */
     public function update(User $user, Comment $comment)
     {
-        return $user->id === (int) $comment->user_id;
+        return $user->id === (int) $comment->user_id || $user->isAdmin();
     }
 
     /**

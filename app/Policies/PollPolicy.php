@@ -18,7 +18,7 @@ class PollPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**
@@ -30,7 +30,7 @@ class PollPolicy
      */
     public function view(User $user, Poll $poll)
     {
-        //
+        return true;
     }
 
     /**
@@ -41,7 +41,7 @@ class PollPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->isAdmin();
     }
 
     /**
@@ -53,8 +53,7 @@ class PollPolicy
      */
     public function update(User $user, Poll $poll)
     {
-        return $user->id === (int) $poll->user_id
-            && now()->subHour() <= $poll->created_at;
+        return $user->isAdmin();
     }
 
     /**
@@ -66,7 +65,7 @@ class PollPolicy
      */
     public function delete(User $user, Poll $poll)
     {
-        return $user->id === (int) $poll->user_id || $user->isAdmin();
+        return $user->isAdmin();
     }
 
     /**
@@ -78,7 +77,7 @@ class PollPolicy
      */
     public function restore(User $user, Poll $poll)
     {
-        //
+        return $user->isAdmin();
     }
 
     /**
@@ -90,6 +89,6 @@ class PollPolicy
      */
     public function forceDelete(User $user, Poll $poll)
     {
-        //
+        return $user->isAdmin();
     }
 }

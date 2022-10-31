@@ -135,6 +135,22 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tgalopin/html-sanitizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/akaunting/laravel-money" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/filament/forms" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/filament/tables" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/filament/support" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/filament/filament" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-heroicons" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/blade-ui-kit/blade-icons" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/danharrin/date-format-converter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/filament/notifications" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ryangjchandler/blade-capture-directive" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/uri-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/danharrin/livewire-rate-limiting" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/invade" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-package-tools" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

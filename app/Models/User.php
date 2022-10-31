@@ -2,17 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasAvatar;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+
 
 /**
  * @mixin IdeHelperUser
  */
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     use HasFactory;
 
@@ -54,7 +55,17 @@ class User extends Authenticatable
     public function isAdmin(): bool
     {
         return in_array($this->slack_id, [
-            'U0203LX28H0'
+            'U0203LX28H0', // Nick Pratley
         ]);
+    }
+
+    public function canAccessFilament(): bool
+    {
+        return $this->isAdmin();
+    }
+
+    public function getFilamentAvatarUrl(): ?string
+    {
+        return $this->getAvatar();
     }
 }
