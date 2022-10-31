@@ -31,14 +31,4 @@ class CommentFactory extends Factory
             'body' => $this->faker->paragraph(5),
         ];
     }
-
-    public function existing()
-    {
-        return $this->state(function (array $attributes) {
-            return [
-                'user_id' => $this->faker->numberBetween(1, 20),
-                'status_id' => 1,
-            ];
-        });
-    }
 }
