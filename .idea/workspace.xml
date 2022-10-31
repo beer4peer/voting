@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Unit/PollTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/docker-build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker-build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vote.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/VoteFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/VoteFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/AdminSetStatusTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/AuthenticationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/EmailVerificationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/PasswordConfirmationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/PasswordResetTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Auth/RegistrationTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CommentNotificationsTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Comments/AddCommentTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Comments/CommentsSpamManagementTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Comments/DeleteCommentTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Comments/EditCommentTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Comments/ShowCommentsTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/CreateIdeaTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/DeleteIdeaTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/EditIdeaTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Filters/CategoryFiltersTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Filters/OtherFiltersTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Filters/SearchFilterTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Filters/StatusFiltersTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/GravatarTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ShowIdeasTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/SpamManagementTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/VoteIndexPageTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/VoteShowPageTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/IdeaTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/Jobs/NotifyAllVotersTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/StatusTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/UserTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +213,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667174885419</updated>
-      <workItem from="1667174886941" duration="27521000" />
+      <workItem from="1667174886941" duration="27870000" />
     </task>
     <servers />
   </component>
