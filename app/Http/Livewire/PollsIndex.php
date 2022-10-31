@@ -20,10 +20,10 @@ class PollsIndex extends Component
     public $search;
 
     protected $queryString = [
-        'status',
-        'category',
-        'filter',
-        'search',
+        'status' => ['except' => 'All'],
+        'category' => ['except' => 'All Categories'],
+        'filter' => ['except' => 'No Filter'],
+        'search' => ['except' => ''],
     ];
 
     protected $listeners = ['queryStringUpdatedStatus'];

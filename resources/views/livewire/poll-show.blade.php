@@ -17,19 +17,27 @@
 
                 <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                     <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
-                        <div class="hidden md:block">&bull;</div>
-                        <div>{{ $poll->created_at?->diffForHumans() ?? '-' }}</div>
+                        <div>Created {{ $poll->created_at?->diffForHumans() ?? '-' }}</div>
+                        <div>&bull;</div>
+                        <div>Ends {{ $poll->ends_at?->diffForHumans() ?? '-' }}</div>
                         <div>&bull;</div>
                         <div>{{ $poll->category->name }}</div>
                         <div>&bull;</div>
-                        <div class="text-gray-900">{{ $poll->comments()->count() }} comments</div>
+                        <div class="text-gray-900">{{ $poll->comments->where('is_voting', false)->count() }}comments
+                        </div>
                     </div>
                     <div
                         class="flex items-center space-x-2 mt-4 md:mt-0"
                         x-data="{ isOpen: false }"
                     >
                         <div
-                            class="{{ 'status-'.Str::kebab($poll->status->name) }} text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">{{ $poll->status->name }}</div>
+                            class="{{ 'status-'.Str::kebab($poll->status->name) }} @if($poll->ends_at->isPast()) status-closed @endif text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                            @if($poll->ends_at->isPast())
+                                Closed
+                            @else
+                                {{ $poll->status->name }}
+                            @endif
+                        </div>
                         @auth
                             <div class="relative">
                                 <button
@@ -113,16 +121,34 @@
                         @endauth
                     </div>
 
-                    <div class="flex items-center md:hidden mt-4 md:mt-0">
-                        <div class="bg-gray-100 text-center rounded-xl h-10 px-4 py-2 pr-8">
-                            <div
-                                class="text-sm font-bold leading-none @if($hasVoted) text-blue @endif">{{ $votesCount }}</div>
-                            <div class="text-xxs font-semibold leading-none text-gray-400">Votes</div>
+                    <div class="flex items-center md:hidden mt-4 md:mt-0 w-10">
+                        <div class="bg-white font-semibold text-center rounded-xl px-3 py-2">
+                            <div class="flex flex-row">
+                                <div class="text-center">
+                                    <div class="font-semibold text-2xl text-red-500">{{ $poll->votes_no }}</div>
+                                    <div class="text-red-500">No</div>
+                                </div>
+
+                                <div class="text-center ml-4">
+                                    <div class="font-semibold text-2xl text-green-500 ">{{ $poll->votes_yes }}</div>
+                                    <div class="text-green-500">Yes</div>
+                                </div>
+                            </div>
                         </div>
-                        @if (!$hasVoted)
-                            <button wire:click.prevent="voteNo" class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">Vote No</button>
-                            <button wire:click.prevent="voteYes" class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">Vote Yes</button>
-                        @endif
+
+
+                        @auth
+                            @if (!$hasVoted && $poll->openForVoting())
+                                <button wire:click.prevent="voteNo"
+                                        class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
+                                    Vote No
+                                </button>
+                                <button wire:click.prevent="voteYes"
+                                        class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
+                                    Vote Yes
+                                </button>
+                            @endif
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -139,10 +165,18 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-3">
-            @if (!$hasVoted)
-                <button wire:click.prevent="voteNo" class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">Vote No</button>
-                <button wire:click.prevent="voteYes" class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">Vote Yes</button>
-            @endif
+            @auth
+                @if (!$hasVoted && $poll->openForVoting())
+                    <button wire:click.prevent="voteNo"
+                            class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
+                        Vote No
+                    </button>
+                    <button wire:click.prevent="voteYes"
+                            class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
+                        Vote Yes
+                    </button>
+                @endif
+            @endauth
 
             <div class="bg-white font-semibold text-center rounded-xl px-3 py-2">
                 <div class="flex flex-row">

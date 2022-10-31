@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use DivisionByZeroError;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Psy\Command\Command;
 
 /**
  * @mixin IdeHelperPoll
@@ -126,14 +127,24 @@ class Poll extends Model
         if ($this->isVotedByUser($user)) {
             throw new DuplicateVoteException;
         }
+        return \DB::transaction(function () use ($user) {
+            /** @var Vote $vote */
+            $vote = Vote::create([
+                'poll_id' => $this->id,
+                'user_id' => $user->id,
+            ]);
 
-        /** @var Vote $vote */
-        $vote = Vote::create([
-            'poll_id' => $this->id,
-            'user_id' => $user->id,
-        ]);
+            // This comment is used for the timeline.
+            Comment::create([
+                'poll_id' => $this->id,
+                'user_id' => $user->id,
+                'status_id' => $this->status_id,
+                'body' => '-',
+                'is_voting' => true,
+            ]);
 
-        return $vote->exists();
+            return $vote->exists;
+        });
     }
 
     public function asPercent(): float
@@ -147,6 +158,7 @@ class Poll extends Model
 
     public function openForVoting(): bool
     {
-        return $this->status->name === 'Open';
+        // If the status is Open, and the end date is in the future, we're open for voting
+        return $this->status->name === 'Open' && $this->ends_at->isFuture();
     }
 }

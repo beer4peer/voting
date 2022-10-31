@@ -4,10 +4,17 @@
         <div class="comments-container relative space-y-6 md:ml-22 pt-4 my-8 mt-1">
 
             @foreach ($comments as $comment)
-                <livewire:poll-comment
-                    :key="$comment->id"
-                    :comment="$comment"
-                />
+                @if($comment->is_voting)
+                    <livewire:poll-comment-vote
+                        :key="$comment->id"
+                        :comment="$comment"
+                    />
+                @else
+                    <livewire:poll-comment
+                        :key="$comment->id"
+                        :comment="$comment"
+                    />
+                @endif
             @endforeach
         </div>
 

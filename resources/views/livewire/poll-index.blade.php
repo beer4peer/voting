@@ -12,30 +12,37 @@
 >
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="w-50 flex flex-row">
-            <div class="text-center">
+            <div class="text-center w-20">
                 <div class="font-semibold text-2xl text-red-500">{{ $poll->votes_no }}</div>
                 <div class="text-red-500">No</div>
-                @if ($hasVoted)
-                    <div class="w-20"></div>
-                @else
-                    <button wire:click.prevent="voteNo" class="pt-2 w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">Vote No</button>
-                @endif
+                @auth
+                    @if (!$hasVoted && $poll->openForVoting())
+                        <button wire:click.prevent="voteNo"
+                                class="pt-2 w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
+                            Vote No
+                        </button>
+                    @endif
+                @endauth
             </div>
 
-            <div class="text-center ml-4">
+            <div class="text-center ml-4 w-20">
                 <div class="font-semibold text-2xl text-green-500">{{ $poll->votes_yes }}</div>
                 <div class="text-green-500">Yes</div>
-                @if ($hasVoted)
-                    <div class="w-20"></div>
-                @else
-                    <button wire:click.prevent="voteYes" class="pt-2 w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">Vote Yes</button>
-                @endif
+                @auth
+                    @if (!$hasVoted && $poll->openForVoting())
+                        <button wire:click.prevent="voteYes"
+                                class="pt-2 w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
+                            Vote Yes
+                        </button>
+                    @endif
+                @endauth
             </div>
 
         </div>
 
         <div class="w-full h-4 @if($poll->votes_count) bg-green-600 @else bg-gray-500 @endif mt-8">
-            <div class="h-4 @if($poll->votes_count) bg-red-600 @else bg-gray-500 @endif" style="width: {{ $poll->asPercent() }}%"></div>
+            <div class="h-4 @if($poll->votes_count) bg-red-600 @else bg-gray-500 @endif"
+                 style="width: {{ $poll->asPercent() }}%"></div>
         </div>
 
     </div>
@@ -60,17 +67,28 @@
 
             <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                 <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
-                    <div>{{ $poll->created_at?->diffForHumans() ?? '-' }}</div>
+                    <div>Created {{ $poll->created_at?->diffForHumans() ?? '-' }}</div>
+                    <div>&bull;</div>
+                    <div>Ends {{ $poll->ends_at?->diffForHumans() ?? '-' }}</div>
                     <div>&bull;</div>
                     <div>{{ $poll->category->name }}</div>
                     <div>&bull;</div>
-                    <div wire:ignore class="text-gray-900">{{ $poll->comments_count }} comments</div>
+                    <div wire:ignore class="text-gray-900">{{ $poll->comments->where('is_voting', false)->count() }}
+                        comments
+                    </div>
                 </div>
                 <div
                     x-data="{ isOpen: false }"
                     class="flex items-center space-x-2 mt-4 md:mt-0"
                 >
-                    <div class="{{ 'status-'.Str::kebab($poll->status->name) }} text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">{{ $poll->status->name }}</div>
+                    <div
+                        class="{{ 'status-'.Str::kebab($poll->status->name) }} @if($poll->ends_at->isPast()) status-closed @endif text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                        @if($poll->ends_at->isPast())
+                            Closed
+                        @else
+                            {{ $poll->status->name }}
+                        @endif
+                    </div>
                 </div>
 
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
@@ -86,11 +104,18 @@
                             <div class="text-green-500">Yes</div>
                         </div>
                     </div>
-
-                    @if (!$hasVoted)
-                        <button wire:click.prevent="voteNo" class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">Vote No</button>
-                        <button wire:click.prevent="voteYes" class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">Vote Yes</button>
-                    @endif
+                    @auth
+                        @if (!$hasVoted && $poll->openForVoting())
+                            <button wire:click.prevent="voteNo"
+                                    class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
+                                Vote No
+                            </button>
+                            <button wire:click.prevent="voteYes"
+                                    class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
+                                Vote Yes
+                            </button>
+                        @endif
+                    @endauth
                 </div>
             </div>
         </div>

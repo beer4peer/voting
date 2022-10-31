@@ -71,18 +71,10 @@
     @apply bg-gray-200;
 }
 
-.status-considering, .status-considering:before {
-    @apply bg-purple text-white;
-}
-
-.status-in-progress, .status-in-progress:before {
-    @apply bg-yellow text-white;
-}
-
-.status-implemented, .status-implemented:before {
+.status-accepted, .status-accepted:before {
     @apply bg-green-500 text-white;
 }
 
-.status-closed, .status-closed:before {
+.status-rejected, .status-rejected:before {
     @apply bg-red-500 text-white;
 }

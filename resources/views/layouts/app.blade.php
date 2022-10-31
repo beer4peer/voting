@@ -23,7 +23,8 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans bg-gray-background text-gray-900 text-sm">
-        <header class="container mx-auto max-w-custom flex flex-col md:flex-row mx-auto  items-center justify-between py-4">
+
+        <header class="max-w-6xl mx-auto px-2 md:px-0 flex flex-row justify-between py-4">
             <a href="/" class="flex flex-row"><img src="{{ asset('img/logo.jpg') }}" alt="logo" class="h-12"></a>
             <div class="flex items-center mt-2 md:mt-0">
                 @if (Route::has('login'))
@@ -55,7 +56,7 @@
             </div>
         </header>
 
-        <main class="container mx-auto max-w-custom flex flex-col md:flex-row">
+        <main class="max-w-6xl mx-auto flex flex-col md:flex-row">
 
             <div class="w-full px-2 md:px-0 ">
                 <livewire:status-filters />

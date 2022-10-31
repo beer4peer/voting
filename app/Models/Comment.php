@@ -16,6 +16,15 @@ class Comment extends Model
     protected $guarded = [];
     protected $perPage = 20;
 
+    protected $fillable = [
+        'poll_id',
+        'user_id',
+        'body',
+        'status_id',
+        'is_status_update',
+        'is_voting'
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
