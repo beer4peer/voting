@@ -15,7 +15,7 @@
         "laravel-vite-plugin": "^0.7.0",
         "lodash": "^4.17.19",
         "postcss": "^8.2.1",
-        "postcss-import": "^12.0.1",
+        "postcss-import": "^15.0.0",
         "sass": "^1.55.0",
         "sass-loader": "^12.1.0",
         "tailwindcss": "^2.1.2",
