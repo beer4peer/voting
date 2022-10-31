@@ -20,6 +20,5 @@ Route::get('/polls/{poll:slug}', [PollController::class, 'show'])->name('poll.sh
 
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/register', [AuthController::class, 'login'])->name('register');
 Route::get('/login/callback', [AuthController::class, 'callback']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

@@ -1,8 +1,9 @@
-## Build a Voting App
+## beer4peer - Voting App
+A stupid voting app for the beer4peer Slack. This code is open source so that it's audit-able and transparent. If you have any questions, please contact the beer4peer team.
 
-Source Code for **"Build a Voting App"** series on Laracasts: https://laracasts.com/series/build-a-voting-app
+This app tracks who votes, but not the actual vote.
 
-Each episode has a corresponding commit in git, so checkout the commit history for that. If you would like to go back to a particular point, you can do a `git checkout <hash_of_commit>`.
+Emails are not used, as they can in theory be tracked. Instead, Slack handles and logins are used.
 
 ## Installation
 

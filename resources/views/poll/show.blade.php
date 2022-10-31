@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="title">
-        {{ $poll->title }} | Laracasts Voting
+        {{ $poll->title }} | B4P - Voting
     </x-slot>
     <div>
         <a href="{{ $backUrl }}" class="flex items-center font-semibold hover:underline">
