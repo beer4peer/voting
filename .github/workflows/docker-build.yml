@@ -30,9 +30,6 @@ jobs:
         with:
           images: ghcr.io/beer4peer/voting
 
-      - name: Build Documentation
-        run: mkdocs build --no-directory-urls
-
       - id: build
         name: Build and Publish container
         env:
