@@ -81,7 +81,7 @@
         </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
                 <li>
-                    <a href="https://github.com/beer4peer/voting.beer4peer.au" class="hover:underline"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a href="https://github.com/beer4peer/voting" class="hover:underline"><i class="fa-brands fa-github"></i> GitHub</a>
                 </li>
             </ul>
         </footer>
