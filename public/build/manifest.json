@@ -8,12 +8,12 @@
     "src": "node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf"
   },
   "resources/js/app.js": {
-    "file": "assets/app.6d4f503b.js",
+    "file": "assets/app.56dcc238.js",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/css/app.css": {
-    "file": "assets/app.3dc24b76.css",
+    "file": "assets/app.c4871c6c.css",
     "src": "resources/css/app.css",
     "isEntry": true
   }

@@ -3,12 +3,12 @@
 namespace App\Models;
 
 use App\Exceptions\DuplicateVoteException;
-use App\Exceptions\VoteNotFoundException;
+use App\Notifications\PollCreated;
 use Cviebrock\EloquentSluggable\Sluggable;
 use DivisionByZeroError;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Psy\Command\Command;
+use Illuminate\Support\Facades\Notification;
 
 /**
  * @mixin IdeHelperPoll
@@ -39,6 +39,13 @@ class Poll extends Model
         static::creating(function (Poll $poll) {
             $poll->votes_yes = 0;
             $poll->votes_no = 0;
+        });
+
+        static::created(function (Poll $poll) {
+            // Send a notification to Slack.
+            if($webhook = config('services.slack.notification_channel', false)) {
+                Notification::route('slack', $webhook)->notify(new PollCreated($poll));
+            }
         });
     }
 
@@ -159,6 +166,14 @@ class Poll extends Model
     public function openForVoting(): bool
     {
         // If the status is Open, and the end date is in the future, we're open for voting
-        return $this->status->name === 'Open' && $this->ends_at->isFuture();
+        if($this->ends_at && $this->ends_at->isFuture()) {
+            return true;
+        }
+
+        if($this->status_id === Status::query()->where('name', 'Open')->first()->id) {
+            return true;
+        }
+
+        return false;
     }
 }

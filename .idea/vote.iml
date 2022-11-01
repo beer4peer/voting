@@ -154,9 +154,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/pestphp/pest" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pestphp/pest-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/pestphp/pest-plugin-laravel" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/commonmark-shiki-highlighter" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-markdown" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/shiki-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/slack-notification-channel" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
