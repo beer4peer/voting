@@ -26,12 +26,10 @@
                 <a href="{{ route('poll.show', $poll) }}" class="poll-link hover:underline">{{ $poll->title }}</a>
             </h4>
             <div class="text-gray-600 mt-3 line-clamp-3">
-                @admin
-                @if ($poll->spam_reports > 0)
-                    <div class="text-red mb-2">Spam Reports: {{ $poll->spam_reports }}</div>
-                @endif
-                @endadmin
-                {{ $poll->description }}
+                <x-markdown>
+                    {!! $poll->description !!}
+                </x-markdown>
+
             </div>
 
             <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">

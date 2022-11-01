@@ -48,7 +48,7 @@
             </div>
         </header>
 
-        <main class="max-w-6xl mx-auto flex flex-col md:flex-row pb-12">
+        <main class="max-w-6xl mx-auto flex flex-col md:flex-row pb-28">
 
             <div class="w-full px-2 ">
                 <livewire:status-filters />
