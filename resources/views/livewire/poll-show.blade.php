@@ -12,7 +12,7 @@
                     {{ $poll->title }}
                 </h4>
                 <div class="text-gray-600 mt-3">
-                    {!! nl2br(e($poll->description)) !!}
+                    <x-markdown>{!! nl2br($poll->description) !!}</x-markdown>
                 </div>
 
                 <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">

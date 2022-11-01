@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vote.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/polls-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/polls-index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +172,9 @@
       <path value="$PROJECT_DIR$/vendor/pestphp/pest" />
       <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin" />
       <path value="$PROJECT_DIR$/vendor/pestphp/pest-plugin-laravel" />
+      <path value="$PROJECT_DIR$/vendor/spatie/commonmark-shiki-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-markdown" />
+      <path value="$PROJECT_DIR$/vendor/spatie/shiki-php" />
     </include_path>
   </component>
   <component name="ProjectId" id="2GsQbrE69M1GytQl614cLu8R0dc" />
@@ -180,20 +183,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "18.9.1",
-    "javascript.nodejs.core.library.typings.version": "18.11.8",
-    "last_opened_file_path": "/Users/nickp/code/vote/app/Http/Livewire",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.9.1&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nickp/code/vote/app/Http/Livewire&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Http/Livewire" />
