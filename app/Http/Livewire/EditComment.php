@@ -15,13 +15,14 @@ class EditComment extends Component
         'body' => 'required|min:4',
     ];
 
-    protected $listeners = ['setEditComment'];
+    protected $listeners = ['refresh-screen' => '$refresh', 'setEditComment'];
 
     public function setEditComment($commentId)
     {
         $this->comment = Comment::findOrFail($commentId);
         $this->body = $this->comment->body;
 
+        $this->emit('refresh-screen');
         $this->emit('editCommentWasSet');
     }
 
@@ -36,7 +37,7 @@ class EditComment extends Component
         $this->comment->body = $this->body;
         $this->comment->save();
 
-        $this->emit('commentWasUpdated', 'Comment was updated!');
+        $this->emit('refresh-screen');
     }
 
     public function render()

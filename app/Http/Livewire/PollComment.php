@@ -7,29 +7,10 @@ use Livewire\Component;
 
 class PollComment extends Component
 {
-    public $comment;
+    public Comment $comment;
     public $pollUserId;
 
-    protected $listeners = [
-        'commentWasUpdated',
-        'commentWasMarkedAsSpam',
-        'commentWasMarkedAsNotSpam',
-    ];
-
-    public function commentWasUpdated()
-    {
-        $this->comment->refresh();
-    }
-
-    public function commentWasMarkedAsSpam()
-    {
-        $this->comment->refresh();
-    }
-
-    public function commentWasMarkedAsNotSpam()
-    {
-        $this->comment->refresh();
-    }
+    protected $listeners = ['refresh-screen' => '$refresh'];
 
     public function mount(Comment $comment)
     {

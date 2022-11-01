@@ -59,21 +59,6 @@
             </div>
         </main>
 
-        @if (session('success_message'))
-            <x-notification-success
-                :redirect="true"
-                message-to-display="{{ (session('success_message')) }}"
-            />
-        @endif
-
-        @if (session('error_message'))
-            <x-notification-success
-                type="error"
-                :redirect="true"
-                message-to-display="{{ (session('error_message')) }}"
-            />
-        @endif
-
         <livewire:scripts />
         <footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Built by <a href="https://theitdept.au/" class="hover:underline">The IT Dept</a>.

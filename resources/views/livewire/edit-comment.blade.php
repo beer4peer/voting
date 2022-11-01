@@ -17,12 +17,12 @@
             $nextTick(() => $refs.editComment.focus())
         })
     "
-    class="fixed z-10 inset-0 overflow-y-auto"
+    class="fixed inset-0 overflow-y-auto mb-6"
     aria-labelledby="modal-title"
     role="dialog"
     aria-modal="true"
 >
-    <div class="flex items-end justify-center min-h-screen">
+    <div class="flex items-center justify-center min-h-screen">
         <div
             x-show.transition.opacity="isOpen"
             class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
@@ -31,7 +31,7 @@
 
         <div
             x-show.transition.origin.bottom.duration.300ms="isOpen"
-            class="modal bg-white rounded-tl-xl rounded-tr-xl overflow-hidden transform transition-all py-4 sm:max-w-lg sm:w-full"
+            class="modal bg-white rounded-xl overflow-hidden transform transition-all py-4 sm:max-w-lg sm:w-full"
         >
             <div class="absolute top-0 right-0 pt-4 pr-4">
                 <button
