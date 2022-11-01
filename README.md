@@ -1,5 +1,5 @@
 ## beer4peer - Voting App
-A stupid voting app for the beer4peer Slack. This code is open source so that it's audit-able and transparent. If you have any questions, please contact the beer4peer team.
+A stupid voting app for the beer4peer Slack. This code is open source so that it's auditable and transparent. If you have any questions, please contact the Beer4Peer team.
 
 This app tracks who votes, but not the actual vote.
 
