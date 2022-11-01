@@ -165,6 +165,11 @@ class Poll extends Model
 
     public function openForVoting(): bool
     {
+        // If the status is Upcoming then lets not allow voting
+        if($this->status_id === Status::query()->where('name', 'Upcoming')->first()->id) {
+            return false;
+        }
+
         // If the status is Open, and the end date is in the future, we're open for voting
         if($this->ends_at && $this->ends_at->isFuture()) {
             return true;
