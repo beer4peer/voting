@@ -16,7 +16,6 @@
         <livewire:styles />
     </head>
     <body class="font-sans bg-gray-background text-gray-900 text-sm">
-
         <header class="max-w-6xl mx-auto px-2 flex flex-row justify-between py-4">
             <a href="/" class="flex flex-row"><img src="{{ asset('img/logo.jpg') }}" alt="logo" class="h-12"></a>
             <div class="flex items-center mt-2 md:mt-0">
@@ -49,7 +48,7 @@
             </div>
         </header>
 
-        <main class="max-w-6xl mx-auto flex flex-col md:flex-row">
+        <main class="max-w-6xl mx-auto flex flex-col md:flex-row pb-12">
 
             <div class="w-full px-2 ">
                 <livewire:status-filters />
