@@ -17,7 +17,7 @@ class AuthController extends Controller
     {
         auth()->logout();
 
-        return redirect()->route('poll.index');
+        return redirect()->route('login');
     }
 
     public function callback(): RedirectResponse
@@ -34,6 +34,6 @@ class AuthController extends Controller
 
         auth()->login($user);
 
-        return redirect()->route('poll.index');
+        return redirect()->intended(route('poll.index'));
     }
 }
