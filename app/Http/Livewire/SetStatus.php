@@ -13,6 +13,8 @@ class SetStatus extends Component
     public $status;
     public $comment;
 
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     public function mount(Poll $poll)
     {
         $this->poll = $poll;
@@ -26,7 +28,7 @@ class SetStatus extends Component
         }
 
         if ($this->poll->status_id === (int) $this->status) {
-            $this->emit('statusWasUpdatedError', 'Status is the same!');
+            $this->emit('refresh-screen');
 
             return;
         }
@@ -44,7 +46,7 @@ class SetStatus extends Component
 
         $this->reset('comment');
 
-        $this->emit('statusWasUpdated', 'Status was updated successfully!');
+        $this->emit('refresh-screen');
     }
 
     public function render()

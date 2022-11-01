@@ -17,6 +17,8 @@ class CreatePoll extends Component
     public $category = 1;
     public $description;
 
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     protected $rules = [
         'title' => 'required|min:4',
         'category' => 'required|integer|exists:categories,id',

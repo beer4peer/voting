@@ -12,6 +12,8 @@ class StatusFilters extends Component
     public $status;
     public $statusCount;
 
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     public function mount()
     {
         $this->statusCount = Status::getCount();
@@ -25,7 +27,7 @@ class StatusFilters extends Component
     public function setStatus($newStatus)
     {
         $this->status = $newStatus;
-        $this->emit('queryStringUpdatedStatus', $this->status);
+        $this->emit('refresh-screen');
 
         if ($this->getPreviousRouteName() === 'poll.show') {
             return redirect()->route('poll.index', [

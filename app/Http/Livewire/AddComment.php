@@ -15,6 +15,9 @@ class AddComment extends Component
 
     public $poll;
     public $comment;
+
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     protected $rules = [
         'comment' => 'required|min:4',
     ];
@@ -41,7 +44,7 @@ class AddComment extends Component
 
         $this->reset('comment');
 
-        $this->emit('commentWasAdded', 'Comment was posted!');
+        $this->emit('refresh-screen');
     }
 
     public function render()

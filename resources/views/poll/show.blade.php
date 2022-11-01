@@ -18,7 +18,5 @@
 
     <livewire:poll-comments :poll="$poll" />
 
-    <x-notification-success />
-
     <x-modals-container :poll="$poll" />
 </x-app-layout>

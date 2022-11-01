@@ -9,6 +9,8 @@ class PollCommentVote extends Component
 {
     public Comment $comment;
 
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     public function mount(Comment $comment)
     {
         $this->comment = $comment;

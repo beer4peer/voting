@@ -24,7 +24,9 @@ class VotesRelationManager extends RelationManager
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('slack_id'),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('nickname'),
             ]);
     }
 }

@@ -13,7 +13,7 @@ class PollComments extends Component
 
     public $poll;
 
-    protected $listeners = ['commentWasAdded', 'commentWasDeleted', 'statusWasUpdated'];
+    protected $listeners = ['refresh-screen' => '$refresh'];
 
     public function commentWasAdded()
     {
