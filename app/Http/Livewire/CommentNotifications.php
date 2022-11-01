@@ -15,7 +15,7 @@ class CommentNotifications extends Component
     public $notificationCount;
     public $isLoading;
 
-    protected $listeners = ['getNotifications'];
+    protected $listeners = ['refresh-screen' => '$refresh'];
 
     public function mount()
     {

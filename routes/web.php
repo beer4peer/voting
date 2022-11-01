@@ -15,10 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PollController::class, 'index'])->name('poll.index');
-Route::get('/polls/{poll:slug}', [PollController::class, 'show'])->name('poll.show');
 
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/login/callback', [AuthController::class, 'callback']);
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::middleware('guest')->group(function () {
+    Route::view('/login', 'login')->name('login');
+    Route::get('/login/redirect', [AuthController::class, 'login'])->name('login-redirect');
+    Route::get('/login/callback', [AuthController::class, 'callback']);
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', [PollController::class, 'index'])->name('poll.index');
+    Route::get('/polls/{poll:slug}', [PollController::class, 'show'])->name('poll.show');
+
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+

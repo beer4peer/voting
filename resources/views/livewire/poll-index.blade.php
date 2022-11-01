@@ -12,39 +12,8 @@
 >
     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
         <div class="w-50 flex flex-row">
-            <div class="text-center w-20">
-                <div class="font-semibold text-2xl text-red-500">{{ $poll->votes_no }}</div>
-                <div class="text-red-500">No</div>
-                @auth
-                    @if (!$hasVoted && $poll->openForVoting())
-                        <button wire:click.prevent="voteNo"
-                                class="pt-2 w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
-                            Vote No
-                        </button>
-                    @endif
-                @endauth
-            </div>
-
-            <div class="text-center ml-4 w-20">
-                <div class="font-semibold text-2xl text-green-500">{{ $poll->votes_yes }}</div>
-                <div class="text-green-500">Yes</div>
-                @auth
-                    @if (!$hasVoted && $poll->openForVoting())
-                        <button wire:click.prevent="voteYes"
-                                class="pt-2 w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
-                            Vote Yes
-                        </button>
-                    @endif
-                @endauth
-            </div>
-
+            <x-poll-vote :poll="$poll" :hasVoted="$hasVoted"/>
         </div>
-
-        <div class="w-full h-4 @if($poll->votes_count) bg-green-600 @else bg-gray-500 @endif mt-8">
-            <div class="h-4 @if($poll->votes_count) bg-red-600 @else bg-gray-500 @endif"
-                 style="width: {{ $poll->asPercent() }}%"></div>
-        </div>
-
     </div>
     <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
         <div class="flex-none mx-2 md:mx-0">
@@ -92,30 +61,7 @@
                 </div>
 
                 <div class="flex items-center md:hidden mt-4 md:mt-0">
-
-                    <div class="flex flex-row">
-                        <div class="text-center">
-                            <div class="font-semibold text-2xl text-red-500">{{ $poll->votes_no }}</div>
-                            <div class="text-red-500">No</div>
-                        </div>
-
-                        <div class="text-center ml-4">
-                            <div class="font-semibold text-2xl text-green-500 ">{{ $poll->votes_yes }}</div>
-                            <div class="text-green-500">Yes</div>
-                        </div>
-                    </div>
-                    @auth
-                        @if (!$hasVoted && $poll->openForVoting())
-                            <button wire:click.prevent="voteNo"
-                                    class="w-20 bg-red-200 border border-red-200 hover:border-red-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
-                                Vote No
-                            </button>
-                            <button wire:click.prevent="voteYes"
-                                    class="w-20 bg-green-200 border border-green-200 hover:border-green-400 font-bold text-xxs uppercase rounded-xl transition duration-150 ease-in px-4 py-3 mr-3">
-                                Vote Yes
-                            </button>
-                        @endif
-                    @endauth
+                    <x-poll-vote :poll="$poll" :hasVoted="$hasVoted"/>
                 </div>
             </div>
         </div>

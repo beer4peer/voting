@@ -19,14 +19,14 @@ class PollsIndex extends Component
     public $filter;
     public $search;
 
+    protected $listeners = ['refresh-screen' => '$refresh'];
+
     protected $queryString = [
         'status' => ['except' => 'All'],
         'category' => ['except' => 'All Categories'],
         'filter' => ['except' => 'No Filter'],
         'search' => ['except' => ''],
     ];
-
-    protected $listeners = ['queryStringUpdatedStatus'];
 
     public function mount()
     {
@@ -72,30 +72,22 @@ class PollsIndex extends Component
             'polls' => Poll::with('user', 'category', 'status')
                 ->when($this->status && $this->status !== 'All', function ($query) use ($statuses) {
                     return $query->where('status_id', $statuses->get($this->status));
-                })->when($this->category && $this->category !== 'All Categories', function ($query) use ($categories) {
-                    return $query->where('category_id', $categories->pluck('id', 'name')->get($this->category));
-                })->when($this->filter && $this->filter === 'Top Voted', function ($query) {
-                    return $query->orderByDesc('votes_count');
-                })->when($this->filter && $this->filter === 'My Polls', function ($query) {
-                    return $query->where('user_id', auth()->id());
-                })->when($this->filter && $this->filter === 'Spam Polls', function ($query) {
-                    return $query->where('spam_reports', '>', 0)->orderByDesc('spam_reports');
-                })->when($this->filter && $this->filter === 'Spam Comments', function ($query) {
-                    return $query->whereHas('comments', function ($query) {
-                        $query->where('spam_reports', '>', 0);
-                    });
-                })->when(strlen($this->search) >= 3, function ($query) {
-                    return $query->where('title', 'like', '%'.$this->search.'%');
                 })
-                ->addSelect(['voted_by_user' => Vote::select('id')
-                    ->where('user_id', auth()->id())
-                    ->whereColumn('poll_id', 'polls.id')
-                ])
+                ->when($this->category && $this->category !== 'All Categories', function ($query) use ($categories) {
+                    return $query->where('category_id', $categories->pluck('id', 'name')->get($this->category));
+                })
+                ->when($this->filter && $this->filter === 'Top Voted', function ( $query) {
+                    return $query->orderByDesc('votes_count');
+                })
+                ->when(strlen($this->search) >= 3, function ($query) {
+                    return $query->where('title', 'like', '%' . $this->search . '%');
+                })
                 ->withCount('votes')
                 ->withCount('comments')
                 ->orderBy('id', 'desc')
                 ->simplePaginate()
                 ->withQueryString(),
+
             'categories' => $categories,
         ]);
     }

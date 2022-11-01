@@ -2,16 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="242d8dc4-26c1-41bc-bcbb-1e7b0057219e" name="Changes" comment="Revert &quot;chore(deps): update dependency alpinejs to v3&quot;&#10;&#10;This reverts commit c08790a2">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vote.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vote.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Traits/WithVotes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/poll-vote.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/PollResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/PollResource/RelationManagers/CommentsRelationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/PollResource/RelationManagers/CommentsRelationManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Filament/Resources/PollResource/RelationManagers/VotesRelationManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Filament/Resources/PollResource/RelationManagers/VotesRelationManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/AddComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/AddComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CommentNotifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CommentNotifications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/CreatePoll.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/CreatePoll.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DeleteComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/DeleteComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/DeletePoll.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EditComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/EditComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/EditPoll.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/MarkCommentAsNotSpam.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/MarkCommentAsSpam.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/MarkPollAsNotSpam.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/MarkPollAsSpam.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollComment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollCommentVote.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollCommentVote.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollComments.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollComments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollShow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/PollsIndex.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/PollsIndex.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SetStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/SetStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/StatusFilters.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/StatusFilters.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_04_065809_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_04_065809_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/confirm-password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/reset-password.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify-email.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/application-logo.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/auth-card.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/auth-session-status.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/auth-validation-errors.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/modals-container.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/modals-container.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/notification-success.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/comment-added.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/emails/idea-status-updated.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/add-comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/add-comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/delete-poll.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/edit-comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/edit-poll.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/mark-comment-as-not-spam.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/mark-comment-as-spam.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/mark-poll-as-not-spam.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/mark-poll-as-spam.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-comment.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/poll-show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/poll/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/poll/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,22 +227,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.9.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nickp/code/vote/app/Http/Livewire&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "18.9.1",
+    "javascript.nodejs.core.library.typings.version": "18.11.8",
+    "last_opened_file_path": "/Users/nickp/code/vote/resources/views",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/app/Http/Livewire" />
       <recent name="$PROJECT_DIR$/resources/views/livewire" />
       <recent name="$PROJECT_DIR$" />

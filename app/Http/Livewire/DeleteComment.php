@@ -10,12 +10,13 @@ class DeleteComment extends Component
 {
     public ?Comment $comment;
 
-    protected $listeners = ['setDeleteComment'];
+    protected $listeners = ['refresh-screen' => '$refresh', 'setDeleteComment'];
 
     public function setDeleteComment($commentId)
     {
         $this->comment = Comment::findOrFail($commentId);
 
+        $this->emit('refresh-screen');
         $this->emit('deleteCommentWasSet');
     }
 
@@ -28,7 +29,7 @@ class DeleteComment extends Component
         Comment::destroy($this->comment->id);
         $this->comment = null;
 
-        $this->emit('commentWasDeleted', 'Comment was deleted!');
+        $this->emit('refresh-screen');
     }
 
     public function render()
