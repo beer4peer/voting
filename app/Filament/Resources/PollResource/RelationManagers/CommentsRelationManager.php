@@ -28,6 +28,14 @@ class CommentsRelationManager extends RelationManager
                 Tables\Columns\TextColumn::make('body'),
                 Tables\Columns\BooleanColumn::make('is_status_update'),
                 Tables\Columns\BooleanColumn::make('is_voting'),
+                Tables\Columns\TextColumn::make('created_at')->dateTime(),
+                Tables\Columns\TextColumn::make('updated_at')->dateTime(),
+
+            ])->actions([
+                Tables\Actions\DeleteAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 }

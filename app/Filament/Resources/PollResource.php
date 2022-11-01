@@ -23,18 +23,30 @@ class PollResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('category_id')
-                    ->relationship('category', 'name')
-                    ->required(),
-                Forms\Components\Select::make('status_id')
-                    ->relationship('status', 'name')
-                    ->required(),
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\MarkdownEditor::make('description')
+
+                Forms\Components\DateTimePicker::make('ends_at')
+                    ->default(now()->addDays(14)->setHour(13)->setMinute(0)->setSecond(0))
                     ->required(),
-                Forms\Components\DateTimePicker::make('ends_at'),
+
+
+                Forms\Components\Select::make('category_id')
+                    ->relationship('category', 'name')
+                    ->default(1)
+                    ->required(),
+
+                Forms\Components\Select::make('status_id')
+                    ->relationship('status', 'name')
+                    ->default(1)
+                    ->required(),
+
+                Forms\Components\Grid::make(1)->schema([
+                    Forms\Components\MarkdownEditor::make('description')
+                        ->required(),
+                ]),
+
             ]);
     }
 
@@ -68,8 +80,8 @@ class PollResource extends Resource
     public static function getRelations(): array
     {
         return [
+            RelationManagers\VotesRelationManager::class,
             RelationManagers\CommentsRelationManager::class,
-            RelationManagers\VotesRelationManager::class
         ];
     }
 
