@@ -41,8 +41,7 @@ class PollComments extends Component
     public function render()
     {
         return view('livewire.poll-comments', [
-            // 'comments' => $this->poll->comments()->paginate()->withQueryString(),
-            'comments' => Comment::with(['user', 'status'])->where('poll_id', $this->poll->id)->paginate()->withQueryString(),
+            'comments' => Comment::with(['user', 'status'])->where('poll_id', $this->poll->id)->paginate(perPage: 10000)->withQueryString(),
         ]);
     }
 }
