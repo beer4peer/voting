@@ -54,18 +54,16 @@ class PollResource extends Resource
     {
         return $table
             ->columns([
-
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\TextColumn::make('description'),
-                Tables\Columns\TextColumn::make('votes_yes'),
-                Tables\Columns\TextColumn::make('votes_no'),
-                Tables\Columns\TextColumn::make('category.name'),
-                Tables\Columns\TextColumn::make('status.name'),
-                Tables\Columns\TextColumn::make('ends_at')
-                    ->dateTime(),
-
+                Tables\Columns\TextColumn::make('title')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('slug')->toggleable(isToggledHiddenByDefault: true)->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('description')->toggleable(isToggledHiddenByDefault: true)->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('votes_yes')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('votes_no')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('category.name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('status.name')->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('ends_at')->sortable()->searchable()->dateTime(),
             ])
+            ->defaultSort('ends_at', 'desc')
             ->filters([
                 //
             ])

@@ -36,7 +36,9 @@
                 <div class="flex items-center text-xs text-gray-400 font-semibold space-x-2">
                     <div>Created {{ $poll->created_at?->diffForHumans() ?? '-' }}</div>
                     <div>&bull;</div>
-                    <div>Ends {{ $poll->ends_at?->diffForHumans() ?? '-' }}</div>
+                    <div>{{ $poll->ope?->isPast() ? 'Ended' : 'Ends'}} {{ $poll->ends_at?->diffForHumans() ?? '-' }}</div>
+                    <div>&bull;</div>
+                    <div>{{ $poll->ends_at?->isPast() ? 'Ended' : 'Ends'}} {{ $poll->ends_at?->diffForHumans() ?? '-' }}</div>
                     <div>&bull;</div>
                     <div>{{ $poll->category->name }}</div>
                     <div>&bull;</div>
@@ -54,7 +56,6 @@
                             Closed
                         @else
                             {{ $poll->status->name }}
-                        @endif
                         @endif
                     </div>
                 </div>
