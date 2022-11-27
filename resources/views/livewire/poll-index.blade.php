@@ -55,6 +55,7 @@
                         @else
                             {{ $poll->status->name }}
                         @endif
+                        @endif
                     </div>
                 </div>
 

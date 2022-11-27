@@ -84,7 +84,7 @@ class PollsIndex extends Component
                 })
                 ->withCount('votes')
                 ->withCount('comments')
-                ->orderBy('id', 'desc')
+                ->orderBy('ends_at', 'desc')
                 ->simplePaginate()
                 ->withQueryString(),
 
