@@ -40,8 +40,13 @@
             <p><a href="https://slack.com/intl/en-au/signin#/signin" target="_blank">https://slack.com/intl/en-au/signin#/signin</a>
             </p>
             <p>&nbsp;</p>
-            <img src="{{ asset('img/slack-example.png') }}" alt="Slack Example"/>
+
+            <figure>
+                <a href="https://slack.com/intl/en-au/signin#/signin">
+                    <img src="{{ asset('img/slack-example.png') }}" alt="Slack Example"/>
+                    <figcaption>This is an example of what  you will see if you are xrobau and click on the link above, you can try clicking it - but it will do nothing.</figcaption>
+                </a>
+            </figure>
         </div>
     </div>
-
 </x-guest-layout>

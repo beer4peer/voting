@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
 Route::middleware('guest')->group(function () {
     Route::view('/login', 'login')->name('login');
     Route::get('/login/redirect', [AuthController::class, 'login'])->name('login-redirect');
