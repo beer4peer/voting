@@ -26,7 +26,7 @@ jobs:
 
       - name: Extract metadata for the Docker image
         id: meta
-        uses: docker/metadata-action@57396166ad8aefe6098280995947635806a0e6ea
+        uses: docker/metadata-action@c314eea2b27e3cb3c7d7be0618510234d8f6178e
         with:
           images: ghcr.io/beer4peer/voting
 
