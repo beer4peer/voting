@@ -22,7 +22,7 @@
         "spatie/laravel-markdown": "^2.2"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.7",
+        "barryvdh/laravel-debugbar": "^4.0",
         "barryvdh/laravel-ide-helper": "^2.12",
         "brianium/paratest": "^6.6",
         "fakerphp/faker": "^1.20",
