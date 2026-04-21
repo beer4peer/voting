@@ -9,4 +9,4 @@ jobs:
       pull-requests: write
     if: startsWith(github.event.pull_request.head.ref, 'dependabot/') || startsWith(github.event.pull_request.head.ref, 'renovate/')
     steps:
-      - uses: hmarr/auto-approve-action@v3
+      - uses: hmarr/auto-approve-action@v4.0.0
